@@ -1,0 +1,148 @@
+/*Todo este codigo es solo para var el estilo al slider*/
+.contenedor-s {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  /*overflow: hidden;*/
+}
+
+.contenedor-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.contenedor-slider > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex; /*nos permite juntar todo el contenido en una sola linea, para nuestro caso, todas la imagenes*/
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.contenedor-slider > div > div {
+  overflow: hidden;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.9);
+}
+
+.slider {
+  width: 1200px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(7, 100%);
+}
+
+.img-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-slider img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1200px;
+  height: 100%;
+}
+
+.contenedor-op {
+  position: absolute;
+  width: 1200px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.contenedor-op:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 12%;
+  width: 100%;
+  left: 0;
+  /*Degradado que se le da a la parte inferior del slider*/
+  background: linear-gradient(rgba(0,171,240,.45), rgba(41,46,131,.45)); /*azulc,azulf*/
+  /*background: linear-gradient(rgba(228,63,145,.45), rgba(149,27,130,.45));*/ /*moradoc,moradof*/
+  
+}
+
+/*Le damos el estilo a los botones que sirven para ir entre imagenes*/
+.btn-s {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1rem 1.2rem;
+  border-radius: 5px;
+  background-color: #DDD;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: .3s;
+}
+
+#previo {
+  left: 5%;
+}
+
+#siguiente {
+  right: 5%;
+}
+
+.btn-s:hover {
+  opacity: 0.9;
+}
+
+.btn-s i {
+  font-size: 50px;
+}
+
+.slider-ul {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+}
+
+/*Le damos el estilo a los indices que se muestran en la parte inferior*/
+.slider-ul li {
+  width: 30px;
+  height: 4px;
+  margin: .3rem;
+  background: #FFF;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.slider-ul li.colored {
+  background: #FFF;
+  opacity: 1;
+}
+
+/*En caso de querer los indices en forma de circulo*/
+/*
+ul li {
+  width: 18px;
+  height: 18px;
+  margin: .3rem;
+  border: 2.5px solid #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+ul li.colored {
+  background: #FFF;
+}
+*/

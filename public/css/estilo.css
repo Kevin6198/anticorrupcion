@@ -1,0 +1,50 @@
+.social {
+    
+    left: 0; /* Establecemos la barra en la izquierda */
+    top: 150px; /* Bajamos la barra 200px de arriba a abajo */
+    z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+    .social ul {
+        list-style: none;
+    }
+ 
+    .social ul li a {
+        font-size: 20px;
+        display: inline-block;
+        color:#fff;
+        background: #000;
+        margin-bottom: 1px;
+        padding: 25px 15px;
+        text-decoration: none;
+        -webkit-transition:all 500ms ease;
+        -o-transition:all 500ms ease;
+        transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+    }
+ 
+    .social ul li .icon-facebook2 {
+        background:rgba(41,46,131,.45);
+    } /* Establecemos los colores de cada red social, aprovechando su class */
+    .social ul li .icon-twitter {
+        background: rgba(0,171,240,.45);
+    }
+    .social ul li .icon-whatsapp {
+        background: rgba(57,169,43,.45);
+    }
+    .social ul li .icon-instagram {
+        background: rgba(255,162,0,.45);
+    }
+    
+
+    .social ul li .icon-facebook2:hover {
+        background: #292E83;
+    } /* Establecemos los colores de cada red social, aprovechando su class */
+    .social ul li .icon-twitter:hover {
+        background: #00abf0;
+    }
+    .social ul li .icon-whatsapp:hover {
+        background: #39A92B;
+    }
+    .social ul li .icon-instagram:hover {
+        background: #FFA200;
+    }

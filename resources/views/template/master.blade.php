@@ -1,0 +1,8 @@
+@include('template.encabezado')
+	@include('template.menu')
+	@yield('contenido_principal')
+	@yield('contenido_transparencia')
+	@yield('contenido_nosotros')
+    @yield('contenido_ciudadanos')
+     @yield('contenido_eventos')
+@include('template.pie')
